@@ -49,11 +49,12 @@
                         </ul>
 
                     </li>
-                    <li>Create a function, <code>parseLine</code> that accepts a line (a string) and populates a struct for the AccessRecord.</li>
-                    <li>Create a function, <code>parseFile</code>, that parses the file one line at a time and passes that line to your <code>parseLine</code> function.</li>
-                    <li>If an error occurs, in the <code>parseLine</code> function, throw an exception that is a string with the text: "<code>Error parsing line: xxxx xxxx xxxx</code>" (where <code>xxxx xxxx xxxx</code> is replaced by the actual text of the line that had the error).
+                    <li>Create a function, <code>parseLine</code> that accepts a line (a string) and populates a struct (using stringstream) for the AccessRecord.</li>
+					<li>If an error occurs in the <code>parseLine</code> function, then throw an exception that is a string with the text: "<code>Error parsing line: xxxx xxxx xxxx</code>" (where <code>xxxx xxxx xxxx</code> is replaced by the actual text of the line that had the error).
                     </li>
-                    <li>In the <code>parseFile</code> function, catch any errors, display the message, and move on to the next line.
+					<li>Modify the function from Assignment 2 that you used to read the contents of the file to populate the array.  This function should now read one full line at a time (using getline), call the parseLine function, and catch any exceptions that parseLine may throw.  If you catch an exception, you should display the message.
+                    
+                    <li>If done correctly, your function from Assignment 2 that was used to display records within range should work without any modification.
                     </li>
                 </ol>
             </p>
